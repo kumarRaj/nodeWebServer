@@ -1,0 +1,8 @@
+Read up and implement a simple web service using nodejs.
+It will have these methods:
+add2: to add 2 given numbers and return the sum
+accumulate: to add a give number and return the total
+reset: to set the total back to zero
+Once ready, you should be able to call the web service methods using:
+browser: http://localhost:8282/add2?first=5&second=6
+command line: curl "http://localhost:8282/add2?first=5&second=6"
