@@ -1,7 +1,10 @@
 var http = require("http");
-
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
-  response.end();
-}).listen(8282);
+var text,id;
+var showOutput = function(request, response){
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	text = request.url;
+	id = require('url').parse(text,true);
+  	response.write("Hello World" + text + 'hi' + JSON.stringify(id));
+  	response.end();
+}
+http.createServer(showOutput).listen(8282);
